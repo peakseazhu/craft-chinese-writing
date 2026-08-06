@@ -30,7 +30,7 @@ Identify the operation before writing:
 - **Restructure**: preserve the claims while changing the reader's path through them.
 - **Edit**: improve clarity, precision, rhythm, or genre fit without silently changing meaning.
 - **Voice-match**: follow a user-provided sample without exaggerating its quirks.
-- **Diagnose or humanize**: treat the request as permission to inspect, not evidence that the text is defective. Edit only after identifying an observable, effect-bearing cluster of problems. If no such cluster exists, return the source verbatim. Never infer authorship from style alone.
+- **Diagnose or humanize**: treat the request as permission to inspect, not evidence that the text is defective. Edit only after identifying an observable, effect-bearing cluster of problems. If no such cluster exists, return the source verbatim. For an exact-return no-op, copy the source span instead of retyping or normalizing it, then compare the result literally before delivery; any change to whitespace, punctuation, quotation marks, casing, or markup is a failure. Never infer authorship from style alone.
 
 Choose the lightest adequate depth:
 
@@ -119,7 +119,7 @@ Prefer exact nouns and active verbs. Let subjects be explicit when responsibilit
 
 Vary sentence and paragraph length because thought, action, evidence, and emphasis require different space. Do not force short-long alternation, sentence-length targets, colloquial particles, or imperfections to simulate statistical “humanity.” Read aloud when rhythm matters; repair places where the subject is lost, the breath has no landing, or every paragraph beats the same pattern.
 
-Use transitions only where the relation is not already clear. Repeat a stable term when consistency helps; do not cycle through synonyms to avoid repetition. Keep qualifiers that carry uncertainty and remove only redundant hedging. Let rhetoric reveal a relation, not manufacture importance.
+Use transitions only where the relation is not already clear. Repeat a stable term when consistency helps; do not cycle through synonyms to avoid repetition. Keep qualifiers that carry uncertainty and remove only redundant hedging. Let rhetoric reveal a relation, not manufacture importance. State a judgment directly unless the material records a real change of mind; then identify whose understanding changed and what evidence changed it. Do not assign the reader a misconception merely to stage a reveal.
 
 Match the register: neutral prose may be the right human voice for technical, reference, news, academic, or policy writing. Do not inject first person, slang, jokes, disorder, or strong opinions unless the genre and author support them.
 
