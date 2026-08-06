@@ -1,0 +1,4 @@
+interface:
+  display_name: "中文非虚构成文"
+  short_description: "把材料写成事实可靠、结构推进、中文自然并保留作者声音的非虚构作品"
+  default_prompt: "使用 $craft-chinese-writing，把这些材料写成事实边界清楚、结构推进自然、声音可认领的中文非虚构作品。"
