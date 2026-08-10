@@ -6,6 +6,7 @@ $ErrorActionPreference = 'Stop'
 
 $repoRoot = Split-Path -Parent $PSScriptRoot
 $errors = [System.Collections.Generic.List[string]]::new()
+$officialValidatorRan = $false
 
 function Add-ContractError {
     param([string]$Message)
@@ -21,6 +22,45 @@ function Read-RepoText {
     }
     return [System.IO.File]::ReadAllText($path, [System.Text.Encoding]::UTF8)
 }
+
+function Invoke-OfficialSkillValidator {
+    $validatorCandidates = [System.Collections.Generic.List[string]]::new()
+    if (-not [string]::IsNullOrWhiteSpace($env:CODEX_HOME)) {
+        $validatorCandidates.Add((Join-Path $env:CODEX_HOME 'skills\.system\skill-creator\scripts\quick_validate.py'))
+    }
+    $userProfile = [Environment]::GetFolderPath([Environment+SpecialFolder]::UserProfile)
+    if (-not [string]::IsNullOrWhiteSpace($userProfile)) {
+        $validatorCandidates.Add((Join-Path $userProfile '.codex\skills\.system\skill-creator\scripts\quick_validate.py'))
+    }
+
+    $validatorPath = $validatorCandidates |
+        Where-Object { Test-Path -LiteralPath $_ -PathType Leaf } |
+        Select-Object -First 1
+    if ($null -eq $validatorPath) {
+        Write-Warning '未发现当前Codex Skill Creator的quick_validate.py；已跳过官方结构校验，只运行仓库合同检查。'
+        return
+    }
+
+    $pythonCommand = Get-Command python -ErrorAction SilentlyContinue
+    if ($null -eq $pythonCommand) {
+        Add-ContractError '已发现quick_validate.py，但PATH中没有可用的python。'
+        return
+    }
+
+    $previousPythonUtf8 = [Environment]::GetEnvironmentVariable('PYTHONUTF8', 'Process')
+    try {
+        [Environment]::SetEnvironmentVariable('PYTHONUTF8', '1', 'Process')
+        $validatorOutput = & $pythonCommand.Source $validatorPath (Join-Path $repoRoot 'skill') 2>&1
+        $script:officialValidatorRan = $true
+        if ($LASTEXITCODE -ne 0) {
+            Add-ContractError "官方Skill结构校验失败：$($validatorOutput -join ' ')"
+        }
+    } finally {
+        [Environment]::SetEnvironmentVariable('PYTHONUTF8', $previousPythonUtf8, 'Process')
+    }
+}
+
+Invoke-OfficialSkillValidator
 
 $versionText = Read-RepoText 'VERSION'
 if ($null -eq $versionText) {
@@ -104,4 +144,7 @@ if ($errors.Count -gt 0) {
 }
 
 Write-Host 'PASS: Skill版本、发现描述、运行元数据与分流回归材料一致。'
+if ($officialValidatorRan) {
+    Write-Host 'PASS: 当前Codex Skill Creator官方结构校验在显式UTF-8环境中通过。'
+}
 Write-Host '说明：该结果不替代真实写作请求的语义评审。'

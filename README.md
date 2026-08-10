@@ -48,6 +48,7 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\tests\validate-skill-contr
 ```
 
 该脚本检查版本、发现元数据、运行入口和回归材料的一致性，不替代真实写作样例的语义评审。
+当当前Codex的Skill Creator校验器可发现时，脚本还会在显式UTF-8进程环境中调用`quick_validate.py`，避免Windows默认代码页把合法中文Skill误判为读取失败；未发现官方校验器时会明确警告，而不会伪称已经运行。
 
 ## 权利与第三方项目
 
