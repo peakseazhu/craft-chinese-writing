@@ -1,6 +1,6 @@
 ---
 name: craft-chinese-writing
-description: Diagnose, draft, restructure, rewrite, and edit substantial Chinese nonfiction where source fidelity, reasoning, reader usefulness, genre fit, or author voice matter. Use for articles, reports, knowledge-base pages, business or technical explanations, evidence-based essays and speeches, public posts, source synthesis, voice matching, style diagnosis, polishing, and requests such as “润色”“改写”“成文”“提升文笔”“去 AI 味”. Use as a prose-quality overlay after narrower artifact skills. Do not use to infer whether AI authored a text, or for literal translation, transcription, data-only output, casual one-line replies, or primary fiction and creative writing.
+description: Diagnose, crystallize, draft, restructure, rewrite, and edit substantial Chinese nonfiction where source fidelity, reasoning, reader usefulness, genre fit, or author voice matter. Use when turning incomplete notes, exploratory conversations, or mixed sources into a supportable current model, and for articles, reports, knowledge-base pages, business or technical explanations, evidence-based essays and speeches, public posts, source synthesis, voice matching, style diagnosis, polishing, and requests such as “润色”“改写”“成文”“提升文笔”“去 AI 味”. Use as a prose-quality overlay after narrower artifact skills. Do not use to infer whether AI authored a text, or for literal translation, transcription, data-only output, casual one-line replies, or primary fiction and creative writing.
 ---
 
 # Craft Chinese Writing
@@ -11,13 +11,15 @@ Deliver the work itself. Use only as much process as the task needs; do not turn
 
 Resolve tradeoffs in this order:
 
-1. factual, source, and semantic integrity;
+1. factual integrity, source identity, and semantic integrity;
 2. the user's task, authorization, genre, and medium;
 3. the reader's understanding, decision, or action;
 4. composition, Chinese expression, and author voice;
 5. surface smoothness and the removal of generic-model patterns.
 
 Never improve a lower layer by damaging a higher one. Do not make a claim less accurate to make it vivid, flatten a necessary genre convention to make it conversational, or replace an author's mature sentence merely to make a rewrite look different.
+
+Source integrity does not mean preserving the source's wording, order, framing, or provisional conclusion. It means preserving what the material can prove, who owns each claim, and how certain it is. When the material contains early intuitions, exploratory notes, or half-formed proposals, recover and test the underlying problem, desired change, constraints, and useful observations; treat the supplied explanation and solution as candidates that may be corrected, combined, or replaced.
 
 Let a narrower skill own research, analysis, document construction, publishing, or a dedicated creative form. Apply this skill only to prose decisions that remain in scope. Do not stack generic style cleaners or merge their checklists; diagnose the actual draft once, after content and structure are sound.
 
@@ -26,7 +28,7 @@ Let a narrower skill own research, analysis, document construction, publishing, 
 Identify the operation before writing:
 
 - **Draft**: build a new work from a request, notes, sources, or conversation.
-- **Crystallize**: recover the current understanding from long or conflicting material, then rewrite it independently of the material's original order.
+- **Crystallize**: recover the underlying problem, intent, evidence, and best current model from long, conflicting, or immature material; challenge provisional formulations, then rewrite independently of the material's wording and order.
 - **Restructure**: preserve the claims while changing the reader's path through them.
 - **Edit**: improve clarity, precision, rhythm, or genre fit without silently changing meaning.
 - **Voice-match**: follow a user-provided sample without exaggerating its quirks.
@@ -37,6 +39,8 @@ Choose the lightest adequate depth:
 1. **Direct** — For short, clear, low-risk work, write directly and perform one quiet revision.
 2. **Standard** — For substantial prose, recover the minimal contract, check what can carry the work, organize the argument, draft, and revise once.
 3. **Source-bound** — For multi-source, high-impact, quoted, or fact-dense work, freeze the semantic inventory and verify every load-bearing claim before polishing.
+
+For crystallization, do not confuse source fidelity with agreement. A user's notes can be evidence of desired outcomes, firsthand context, and important tensions while still containing incomplete categories, causal stories, or proposed solutions. Use the allowed evidence, reasoning, and research to build the strongest supportable model. Keep a supplied formulation only when it remains the best expression; otherwise correct, merge, supersede, or leave it unresolved. Explain departures only when they change a decision, responsibility, or important boundary. A stronger synthesis is still a current model, not proof that every conclusion is correct; keep material inference and validation limits visible.
 
 For a new draft, lead with positive aims and read detailed diagnostics only after a draft reveals a specific problem. For an existing text, diagnose first but repair only observed causes. Do not load every reference by default.
 
@@ -58,8 +62,10 @@ Ask only when a missing answer would materially change the result, risk, authori
 Treat the support gate as blocking for substantial nonfiction. Pass it before outlining:
 
 1. Fix the allowed source set: supplied material, authorized research, and any stable common knowledge that is safe to rely on.
-2. Classify what the work can use: verified fact, attributed source claim, user experience, author judgment, or explicit inference.
+2. Classify what the work can use: verified fact, attributed source claim, user experience, user decision or preference, exploratory framing, author judgment, or explicit inference. Do not promote exploratory framing to a requirement or current truth merely because the user supplied it.
 3. Match the support map to risk. For standard work, privately name what new work each section and paragraph performs. For source-bound work, disputed claims, or a requested length that may exceed the material, map every load-bearing paragraph to its supporting material.
+
+Use this classification only as an internal writing judgment. Do not turn it into a source ledger, a permanent taxonomy of conversation turns, or a request to preserve every input fragment.
 
 A paragraph fails the gate if its only support is an unmarked plausible extension, generic advice, another way to explain the same point, or an unverified claim about typical people, psychology, history, product behavior, social effects, or best practice. Collapse it, source it, mark and justify the inference, or remove it. When the source set is closed, do not introduce product capabilities, practices, examples, or empirical effects absent from that set merely because they sound likely.
 
@@ -95,6 +101,10 @@ For standard or source-bound work, form a compact internal semantic inventory:
 
 Preserve every item that could change the conclusion or the author's responsibility. Keep stable entity names, populations, measures, units, denominators, and time windows exact; a smoother synonym is not an improvement when it changes what was counted or who was described. Remove obsolete conversational turns, repetitions, and abandoned hypotheses. Never add a fact, quotation, citation, personal experience, consensus, or degree of certainty merely to make the prose vivid.
 
+Separate semantic commitments from provisional formulations. Preserve facts, constraints, decisions, desired outcomes, and uncertainty that would change the result. Do not preserve a tentative explanation, category, outline, or proposed solution merely because it appears in the source; test it against the task and replace it when a better-supported model exists. When a user's model is partly right and partly wrong, retain the valid premise and make the corrected relation legible instead of merely echoing or bluntly rejecting the original formulation.
+
+Treat conversation turns, draft structures, discarded explanations, and intermediate tool output as temporary working material. Keep them out of the finished artifact and do not create a persistent record for them unless their exact form independently carries evidence, authorization, disagreement, responsibility, audit, or task-continuity value.
+
 In source-bound work, do not turn a useful interpretation into an existing rule, commitment, responsibility, or recommendation. Audit normative verbs such as “应”“必须”“需要”“不得” and assignments such as “由 X 负责”: each must come from the supplied material, be clearly attributed, or be labeled as a new proposal.
 
 If the material cannot support a needed statement, narrow it, mark it as unknown, omit it, or request the missing source. Do not decorate an evidence gap.
@@ -102,6 +112,8 @@ If the material cannot support a needed statement, narrow it, mark it as unknown
 ## Build the reader's path
 
 Give the work one dominant reader promise. Let sections and paragraphs advance that promise through genuine dependencies rather than the order in which notes appeared.
+
+For crystallization and knowledge-base work, formulate the root problem and a compact current model before outlining. Build the document from the model's dependencies, not from conversation turns or source headings. Put attribution in the main prose only when it changes authority, evidence strength, disagreement, or responsibility; otherwise keep only the few source links or notes required for traceability.
 
 Use the reader's next reasonable question to test sequence: what happened, why it happened, how the author knows, what makes this case different, what follows, and where the claim stops. These are possible relations, not a mandatory outline.
 
@@ -152,6 +164,7 @@ Stop when the reader promise is met, load-bearing claims are supported, required
 
 - Return the finished work without exposing internal inventories or self-review unless the user asks for them.
 - For a rewrite, provide the final version; add a concise change rationale or before/after comparison only when requested or decision-relevant.
+- For crystallization from exploratory notes, return the synthesized current model rather than a transcript-like summary. Do not create or update a source record for the exploratory conversation unless its exact form independently carries evidence, a binding decision, disagreement, responsibility, audit, or task-continuity value and the artifact contract authorizes persistence.
 - In file mode, preserve code blocks, frontmatter, link targets, data, quotations, and unrelated sections unless the user authorizes changes.
 - When public sources carry material claims, preserve or add the few citations needed for traceability in the form expected by the genre. Do not flood the prose with research notes or remove load-bearing attribution for smoothness. Follow [reality-writing.md](references/reality-writing.md).
 - If another skill governs the output format, let it handle artifact construction and rendering while this skill governs prose decisions.
