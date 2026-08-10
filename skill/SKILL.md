@@ -49,10 +49,12 @@ Set the source mode separately from depth:
 For high-leverage open-world or mixed crystallization, run a bounded discovery pass before outlining when established systems could materially change the model:
 
 1. recover a generic problem class without exposing private or sensitive details;
-2. inspect first-order or authoritative sources for a few materially different models, counterexamples, failure modes, and transfer conditions;
+2. choose sources by claim: use first-order material for what a subject defines, designed, or claims; use independent research, operating evidence, or counterexamples for effects, generality, and failure conditions; compare a few materially different model and source families;
 3. return to the supplied evidence to decide what is locally supported, only proposed, or still unknown.
 
-Stop discovery when additional credible sources no longer change the problem structure or competing models and the remaining uncertainty requires local facts or choices. Do not turn research volume into a quality proxy or let an external framework silently become the user's current reality.
+Before promoting a source-derived idea, classify what it supports: a concrete example, a local pattern, a method for one lifecycle stage, or an end-to-end model. Preserve the original problem layer, object, conditions, and uncovered adjacent stages. A named list of products, cases, departments, fields, or methods is a known example set unless the source defines the universe and demonstrates coverage. Do not let a platform implementation, current organization chart, or data schema become the problem ontology merely because it is visible and specific.
+
+Stop discovery only after materially different model and source families have exposed the relevant problem structure, additional credible sources no longer change the judgment, and the remaining uncertainty requires local facts or choices. Do not turn research volume into a quality proxy or let an external framework silently become the user's current reality.
 
 For crystallization, do not confuse source fidelity with agreement. A user's notes can be evidence of desired outcomes, firsthand context, and important tensions while still containing incomplete categories, causal stories, or proposed solutions. Use the source mode's allowed evidence, reasoning, and research to build the strongest supportable model. Keep a supplied formulation only when it remains the best expression; otherwise correct, merge, supersede, or leave it unresolved. Explain departures only when they change a decision, responsibility, or important boundary. A stronger synthesis is still a current model, not proof that every conclusion is correct; keep material inference and validation limits visible.
 
@@ -65,6 +67,7 @@ Infer these conditions from the request and supplied materials:
 - the main change the work should produce in the reader;
 - the reader, medium, and likely use;
 - the source mode and whether outside research is required, allowed, or explicitly closed;
+- the level promised by the title and conclusion, and whether the material supports an example, local pattern, stage method, or end-to-end model;
 - the author's current stance, uncertainty, and preferred voice;
 - hard boundaries involving facts, quotations, privacy, terminology, format, or publication;
 - evidence that would show the work has fulfilled its promise.
@@ -76,7 +79,7 @@ Ask only when a missing answer would materially change the result, risk, authori
 Treat the support gate as blocking for substantial nonfiction. Pass it before outlining:
 
 1. Fix the allowed source set: supplied material, authorized research, and any stable common knowledge that is safe to rely on.
-2. Classify what the work can use: verified fact, attributed source claim, user experience, user decision or preference, exploratory framing, author judgment, or explicit inference. Do not promote exploratory framing to a requirement or current truth merely because the user supplied it.
+2. Classify what the work can use: verified fact, attributed source claim, user experience, user decision or preference, exploratory framing, author judgment, or explicit inference. Record the scope of load-bearing claims and do not promote an example to an exhaustive set, a stage method to a whole-system model, or exploratory framing to a requirement or current truth merely because the user supplied it.
 3. Match the support map to risk. For standard work, privately name what new work each section and paragraph performs. For evidence-intensive work, disputed claims, or a requested length that may exceed the material, map every load-bearing paragraph to its supporting material.
 
 Use this classification only as an internal writing judgment. Do not turn it into a source ledger, a permanent taxonomy of conversation turns, or a request to preserve every input fragment.
@@ -163,14 +166,15 @@ Revise from costly errors to cosmetic ones:
 
 1. **Fact and attribution gate** — Check names, numbers, dates, quotations, citations, causal claims, and the identity of every source.
 2. **Semantic gate** — Ensure that the conclusion, uncertainty, alternatives, boundaries, and author responsibility did not drift.
-3. **Support gate** — Confirm that every load-bearing section is carried by material rather than repetition, invention, or generic inference.
-4. **Structural gate** — Confirm that the title's promise is fulfilled, each part adds something, and the work ends when that promise is complete.
-5. **Delivery gate** — Check explicit length ranges, maxima, required literals, and output shape. When practical, use a deterministic counter; otherwise aim safely inside the range and trim repeated explanation before returning.
-6. **Chinese gate** — Read for recoverable reference, natural word order, concrete verbs, paragraph continuity, cadence, punctuation, and register.
-7. **Voice gate** — Confirm that the work says only what the author can honestly recognize and own.
-8. **Medium gate** — Preserve links, code, frontmatter, tables, citations, and required formatting; check the target rendering when it matters.
+3. **Scope gate** — Check that examples remain examples, lists are not treated as exhaustive without a defined universe, and stage-specific methods have not been promoted beyond their covered lifecycle and object boundaries.
+4. **Support gate** — Confirm that every load-bearing section is carried by material rather than repetition, invention, or generic inference.
+5. **Structural gate** — Confirm that the title's promise is fulfilled, each part adds something, and the work ends when that promise is complete.
+6. **Delivery gate** — Check explicit length ranges, maxima, required literals, and output shape. When practical, use a deterministic counter; otherwise aim safely inside the range and trim repeated explanation before returning.
+7. **Chinese gate** — Read for recoverable reference, natural word order, concrete verbs, paragraph continuity, cadence, punctuation, and register.
+8. **Voice gate** — Confirm that the work says only what the author can honestly recognize and own.
+9. **Medium gate** — Preserve links, code, frontmatter, tables, citations, and required formatting; check the target rendering when it matters.
 
-For high-risk claims, return to first-order or authoritative sources. A second model pass can propose defects but cannot independently certify facts. Treat surface-pattern counts only as prompts for human judgment, never as proof of authorship or automatic grounds for deletion.
+For high-risk claims, return to sources fit for the claim: first-order or authoritative material for definitions, decisions, and current official state; independent evidence, operating results, or counterexamples for effects, generality, and failure. A second model pass can propose defects but cannot independently certify facts. Treat surface-pattern counts only as prompts for human judgment, never as proof of authorship or automatic grounds for deletion.
 
 Stop when the reader promise is met, load-bearing claims are supported, required mechanics are correct, and another pass has no identifiable benefit. Keeping a mature sentence unchanged is a valid editorial decision.
 
