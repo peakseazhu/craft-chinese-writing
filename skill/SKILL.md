@@ -1,6 +1,6 @@
 ---
 name: craft-chinese-writing
-description: Diagnose, crystallize, draft, restructure, rewrite, and edit substantial Chinese nonfiction where source fidelity, reasoning, reader usefulness, genre fit, or author voice matter. Use when turning incomplete notes, exploratory conversations, or mixed sources into a supportable current model, and for articles, reports, knowledge-base pages, business or technical explanations, evidence-based essays and speeches, public posts, source synthesis, voice matching, style diagnosis, polishing, and requests such as “润色”“改写”“成文”“提升文笔”“去 AI 味”. Use as a prose-quality overlay after narrower artifact skills. Do not use to infer whether AI authored a text, or for literal translation, transcription, data-only output, casual one-line replies, or primary fiction and creative writing.
+description: Diagnose, crystallize, draft, restructure, rewrite, and edit substantial Chinese nonfiction where source fidelity, reasoning, reader usefulness, genre fit, or author voice matter. Use when turning incomplete notes, exploratory conversations, or mixed sources into a supportable current model; when a user asks for first-principles understanding or the best current explanation even without flagging that their input is provisional; and for articles, reports, knowledge-base pages, business or technical explanations, evidence-based essays and speeches, public posts, source synthesis, voice matching, style diagnosis, polishing, and requests such as “润色”“改写”“成文”“提升文笔”“去 AI 味”. Use as a prose-quality overlay after narrower artifact skills. Do not use to infer whether AI authored a text, or for literal translation, transcription, data-only output, casual one-line replies, or primary fiction and creative writing.
 ---
 
 # Craft Chinese Writing
@@ -21,7 +21,7 @@ Never improve a lower layer by damaging a higher one. Do not make a claim less a
 
 Source integrity does not mean preserving the source's wording, order, framing, or provisional conclusion. It means preserving what the material can prove, who owns each claim, and how certain it is. When the material contains early intuitions, exploratory notes, or half-formed proposals, recover and test the underlying problem, desired change, constraints, and useful observations; treat the supplied explanation and solution as candidates that may be corrected, combined, or replaced.
 
-Let a narrower skill own research, analysis, document construction, publishing, or a dedicated creative form. Apply this skill only to prose decisions that remain in scope. Do not stack generic style cleaners or merge their checklists; diagnose the actual draft once, after content and structure are sound.
+When a narrower skill owns domain research, analysis, document construction, publishing, or a dedicated creative form, let it run that part of the workflow. This skill still decides the source mode and what the prose requires; if no narrower research workflow applies, use the available research tools within the task's boundary. Do not stack generic style cleaners or merge their checklists; diagnose the actual draft once, after content and structure are sound.
 
 ## Route the task
 
@@ -38,9 +38,23 @@ Choose the lightest adequate depth:
 
 1. **Direct** — For short, clear, low-risk work, write directly and perform one quiet revision.
 2. **Standard** — For substantial prose, recover the minimal contract, check what can carry the work, organize the argument, draft, and revise once.
-3. **Source-bound** — For multi-source, high-impact, quoted, or fact-dense work, freeze the semantic inventory and verify every load-bearing claim before polishing.
+3. **Evidence-intensive** — For multi-source, high-impact, quoted, or fact-dense work, freeze the semantic inventory and verify every load-bearing claim before polishing.
 
-For crystallization, do not confuse source fidelity with agreement. A user's notes can be evidence of desired outcomes, firsthand context, and important tensions while still containing incomplete categories, causal stories, or proposed solutions. Use the allowed evidence, reasoning, and research to build the strongest supportable model. Keep a supplied formulation only when it remains the best expression; otherwise correct, merge, supersede, or leave it unresolved. Explain departures only when they change a decision, responsibility, or important boundary. A stronger synthesis is still a current model, not proof that every conclusion is correct; keep material inference and validation limits visible.
+Set the source mode separately from depth:
+
+- **Closed-source** — Use for literal or fidelity-critical editing, exact comparison, a supplied-source-only summary, an existing transcript used as evidence, or an explicit instruction not to research. Freeze the source set. Clarify what the material means, but do not import external facts, practices, or recommendations or replace the source's semantic commitments. Pure transcription remains outside this skill.
+- **Open-world** — Use for understanding, explanation, first-principles reasoning, knowledge construction, system design, or a request for the best current model when the answer space is not explicitly closed. Treat the user's formulation as a starting observation, not the boundary of possible categories or solutions. The user does not need to say that the formulation is incomplete or immature.
+- **Mixed** — Use when local facts, decisions, quotations, or personal experience are closed to the supplied evidence while the explanatory model, comparison set, or proposed design is open to research. Mark the boundary by claim, not by whole document.
+
+For high-leverage open-world or mixed crystallization, run a bounded discovery pass before outlining when established systems could materially change the model:
+
+1. recover a generic problem class without exposing private or sensitive details;
+2. inspect first-order or authoritative sources for a few materially different models, counterexamples, failure modes, and transfer conditions;
+3. return to the supplied evidence to decide what is locally supported, only proposed, or still unknown.
+
+Stop discovery when additional credible sources no longer change the problem structure or competing models and the remaining uncertainty requires local facts or choices. Do not turn research volume into a quality proxy or let an external framework silently become the user's current reality.
+
+For crystallization, do not confuse source fidelity with agreement. A user's notes can be evidence of desired outcomes, firsthand context, and important tensions while still containing incomplete categories, causal stories, or proposed solutions. Use the source mode's allowed evidence, reasoning, and research to build the strongest supportable model. Keep a supplied formulation only when it remains the best expression; otherwise correct, merge, supersede, or leave it unresolved. Explain departures only when they change a decision, responsibility, or important boundary. A stronger synthesis is still a current model, not proof that every conclusion is correct; keep material inference and validation limits visible.
 
 For a new draft, lead with positive aims and read detailed diagnostics only after a draft reveals a specific problem. For an existing text, diagnose first but repair only observed causes. Do not load every reference by default.
 
@@ -50,7 +64,7 @@ Infer these conditions from the request and supplied materials:
 
 - the main change the work should produce in the reader;
 - the reader, medium, and likely use;
-- the allowed material and whether outside research is authorized or required;
+- the source mode and whether outside research is required, allowed, or explicitly closed;
 - the author's current stance, uncertainty, and preferred voice;
 - hard boundaries involving facts, quotations, privacy, terminology, format, or publication;
 - evidence that would show the work has fulfilled its promise.
@@ -63,7 +77,7 @@ Treat the support gate as blocking for substantial nonfiction. Pass it before ou
 
 1. Fix the allowed source set: supplied material, authorized research, and any stable common knowledge that is safe to rely on.
 2. Classify what the work can use: verified fact, attributed source claim, user experience, user decision or preference, exploratory framing, author judgment, or explicit inference. Do not promote exploratory framing to a requirement or current truth merely because the user supplied it.
-3. Match the support map to risk. For standard work, privately name what new work each section and paragraph performs. For source-bound work, disputed claims, or a requested length that may exceed the material, map every load-bearing paragraph to its supporting material.
+3. Match the support map to risk. For standard work, privately name what new work each section and paragraph performs. For evidence-intensive work, disputed claims, or a requested length that may exceed the material, map every load-bearing paragraph to its supporting material.
 
 Use this classification only as an internal writing judgment. Do not turn it into a source ledger, a permanent taxonomy of conversation turns, or a request to preserve every input fragment.
 
@@ -91,7 +105,7 @@ Voice comes first from selection, knowledge route, degree of certainty, and wher
 
 ## Protect meaning before improving prose
 
-For standard or source-bound work, form a compact internal semantic inventory:
+For standard or evidence-intensive work, form a compact internal semantic inventory:
 
 - verified facts and exact data;
 - source claims and their attribution;
@@ -105,7 +119,7 @@ Separate semantic commitments from provisional formulations. Preserve facts, con
 
 Treat conversation turns, draft structures, discarded explanations, and intermediate tool output as temporary working material. Keep them out of the finished artifact and do not create a persistent record for them unless their exact form independently carries evidence, authorization, disagreement, responsibility, audit, or task-continuity value.
 
-In source-bound work, do not turn a useful interpretation into an existing rule, commitment, responsibility, or recommendation. Audit normative verbs such as “应”“必须”“需要”“不得” and assignments such as “由 X 负责”: each must come from the supplied material, be clearly attributed, or be labeled as a new proposal.
+For locally closed claims in closed-source or mixed work, do not turn a useful interpretation into an existing rule, commitment, responsibility, or recommendation. Audit normative verbs such as “应”“必须”“需要”“不得” and assignments such as “由 X 负责”: each must come from the supplied material, be clearly attributed, or be labeled as a new proposal.
 
 If the material cannot support a needed statement, narrow it, mark it as unknown, omit it, or request the missing source. Do not decorate an evidence gap.
 
@@ -168,7 +182,7 @@ Stop when the reader promise is met, load-bearing claims are supported, required
 - In file mode, preserve code blocks, frontmatter, link targets, data, quotations, and unrelated sections unless the user authorizes changes.
 - When public sources carry material claims, preserve or add the few citations needed for traceability in the form expected by the genre. Do not flood the prose with research notes or remove load-bearing attribution for smoothness. Follow [reality-writing.md](references/reality-writing.md).
 - If another skill governs the output format, let it handle artifact construction and rendering while this skill governs prose decisions.
-- Do not publish, overwrite unrelated files, or broaden the source set without authorization.
+- Do not publish or overwrite unrelated files. Never broaden a closed source set; in open-world or mixed work, keep research bounded by the recovered task, privacy limits, and the discovery stopping condition.
 
 ## Load deeper principles only when needed
 

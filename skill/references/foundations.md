@@ -26,6 +26,16 @@
 
 对话是认识形成的临时工作台，不自动是一组需要长期保存和逐句分类的来源。只有原话本身会证明事实、授权、分歧、责任或审计过程，或是继续任务不可缺少的状态时，才保留必要片段及其身份。通常应让结晶后的当前认识、明确决定、必要未知和承重证据进入成品，让草稿、被淘汰的解释和中间过程退出成品与默认上下文。
 
+## 起始表达不等于答案空间
+
+人的一次输入可能同时包含事实、决定、价值偏好、方向感、类比、因果猜测、候选分类、预设方案和未知。可以把这种尚未分离的状态理解为高熵工作输入，但不要把“高熵”做成长期标签或逐句分类任务。语言清楚不能证明认识正确，表达含混也不能抹去其中的现实锚点。
+
+先区分答案空间。逐字处理、忠实改写、指定资料摘要和明确要求只依据所给材料的任务属于封闭来源任务；外部材料不能悄悄改变其承诺。理解、第一性原理、知识建设、体系设计和最佳当前解释等任务属于开放世界；用户输入是起始观测，不是文章目录、问题分类或候选解法的边界。混合任务则把本地事实、决定与亲历锁在给定证据中，同时允许解释模型和目标方案接受外部研究。
+
+开放世界结晶不能只在输入内部做更聪明的排列。若成熟体系可能实质改变问题模型，先用不暴露敏感信息的抽象问题类别检索少量一阶来源，比较不同机制、反例、失败方式和迁移条件，再回到本地材料校准。研究在新增可信来源不再改变问题结构、剩余差异只能由本地事实或价值选择解决时停止。外部模型提高的是候选质量，不是本地事实的证据等级。
+
+这一区分也决定人机分工。用户提供亲历事实、目标、约束、价值选择、授权与本地纠正；写作者或Agent负责恢复问题、发现外部已知、建立竞争解释、形成当前模型并指出未知。只追问会区分候选模型、改变授权或影响高成本行动的内容，不要求用户先把自己本来就在探索的问题完整建模。
+
 ## 可借鉴的汉语写作传统
 
 - 从刘勰《文心雕龙》的情采、熔裁、章句、附会、体性、养气与知音中，吸收“情理先定、篇章会通、辞随意裁、体性各异、评阅去偏、修改知止”的关系判断；具体用法见 [classical-craft.md](classical-craft.md)。
@@ -56,6 +66,10 @@
 - [北京大学 CCL 语料库](https://cclcorpus.pku.edu.cn/)与[北京语言大学 BCC 语料库](https://bcc.blcu.edu.cn/help.html)：核对真实搭配、上下文和文体分布。语料实例仍须检查来源和时代。
 - [吕叔湘《中国文法要略》出版信息](https://www.cp.com.cn/book/b1412195-f.html)：其“表达论”提供由意义到形式的观察路径。
 - [CCL 2023 人工智能生成语言与人类语言对比研究](https://aclanthology.org/2023.ccl-1.46/)：研究特定开放域问答样本的多维语言特征；不要把分类结果外推为跨时代、跨模型的硬规则。
+- [NASA Stakeholder Expectations Definition](https://www.nasa.gov/reference/4-1-stakeholder-expectations-definition/)：参考怎样把初始期望继续提炼为需要、目标、约束、运行情境与可验证结果，而不把初始表达直接当成设计。
+- [CommonKADS Basics](https://commonkads.org/basics/)：参考知识密集任务的概念分析、成熟任务模板与知识模型。
+- [Eric Evans, Domain-Driven Design Reference](https://www.domainlanguage.com/wp-content/uploads/2016/05/DDD_Reference_2015-03.pdf)：参考领域人员与技术人员协同探索模型、共同语言与明确适用边界。
+- [Anthropic, Effective context engineering for AI agents](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents)：参考最小高信号上下文、按失败模式迭代规则与避免上下文膨胀。
 - [KKKKhazix/human-writing（审读快照）](https://github.com/KKKKhazix/human-writing/tree/4fda173f3fef7fb808f3eba991eeb2528ea4b189)：材料门槛、说话位置、段落推进、现实／虚构边界与改稿流程。
 - [jiji262/humanizer-chinese（审读快照）](https://github.com/jiji262/humanizer-chinese/tree/1d6c08e10fbfe0e1b36ac784834451c6aae0a92c)：对英文症状目录的中文语体化改造、假阳性与防过度纠偏。
 - [blader/humanizer（审读快照）](https://github.com/blader/humanizer/tree/523374dee72d67c7b2b5f858ea0094ffda49c3ac)：英文 AI 写作症状、声音校准、调用模式与保真边界。
