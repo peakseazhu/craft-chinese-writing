@@ -1,4 +1,4 @@
 interface:
   display_name: "中文成文与结晶"
-  short_description: "判断来源边界与抽象层级，把高熵材料结晶为可靠中文作品"
-  default_prompt: "使用 $craft-chinese-writing，先判断来源模式、抽象层级并恢复真正的问题；开放世界有界发现不同来源家族的成熟体系，封闭来源严格保真，再形成证据、范围和结构都可靠的中文非虚构作品。"
+  short_description: "从高熵材料恢复问题、证据与抽象边界，结晶可靠中文当前模型"
+  default_prompt: "使用 $craft-chinese-writing，先判断来源模式；从高熵或探索性材料中恢复真正问题与抽象边界，只在开放世界或混合任务需要时发现外部体系，再形成来源身份清楚、可支持的中文当前模型。"
