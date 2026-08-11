@@ -32,7 +32,9 @@
 
 先区分答案空间。逐字处理、忠实改写、指定资料摘要和明确要求只依据所给材料的任务属于封闭来源任务；外部材料不能悄悄改变其承诺。理解、第一性原理、知识建设、体系设计和最佳当前解释等任务属于开放世界；用户输入是起始观测，不是文章目录、问题分类或候选解法的边界。混合任务则把本地事实、决定与亲历锁在给定证据中，同时允许解释模型和目标方案接受外部研究。
 
-开放世界结晶不能只在输入内部做更聪明的排列。任务需要形成新的问题分类、解释模型、方案或会改变判断与行动的建议时，默认先用不暴露敏感信息的抽象问题类别检索少量不同来源家族；来源边界封闭，或现有高质量外部参照已经覆盖承重主张时，不为形式完整追加研究。来源选择服从主张：一阶材料适合确认某个主体怎样定义、设计或描述自己；效果、普适性和失败条件需要独立研究、运行证据或反例。比较不同机制与迁移条件，再回到本地材料校准。只有这些竞争候选已经足以暴露问题结构、新增可信来源不再改变判断、剩余差异只能由本地事实或价值选择解决时才停止。外部模型提高的是候选质量，不是本地事实的证据等级；优先发现也不等于优先相信、照搬或长期保存。
+开放世界结晶不能只在输入内部做更聪明的排列，但“外部已有知识应进入候选空间”不等于“每次都调用检索工具”。先恢复问题类别、约束和比较判据，不把用户原始分类、模型记忆中的常见说法或首个外部框架锁成方案；再按 `SKILL.md` 的外部证据门判断承重主张是否需要当前、实证或可回源的材料。模型已有的稳定知识可以生成候选类别、检索词和反例，不能替代需要核验的当前证据。
+
+触发检索时，先用不暴露敏感信息的抽象问题类别发现最少但充分的来源。来源选择服从主张：一阶材料适合确认某个主体怎样定义、设计、描述自己或声明当前状态；判断效果、普适性、失败条件、方案差异或迁移时，再增加独立研究、运行证据、反例和机制不同的候选。狭窄官方状态由一个充分的一阶来源支持时即可停止；其他任务在新增可信来源不再改变判断、剩余差异只能由本地事实或价值选择解决时停止。外部模型提高的是候选质量，不是本地事实的证据等级；优先发现也不等于优先相信、照搬或长期保存。
 
 这一区分也决定人机分工。用户提供亲历事实、目标、约束、价值选择、授权与本地纠正；写作者或Agent负责恢复问题、发现外部已知、建立竞争解释、形成当前模型并指出未知。只追问会区分候选模型、改变授权或影响高成本行动的内容，不要求用户先把自己本来就在探索的问题完整建模。
 
@@ -81,6 +83,9 @@
 - [CommonKADS Basics](https://commonkads.org/basics/)：参考知识密集任务的概念分析、成熟任务模板与知识模型。
 - [Eric Evans, Domain-Driven Design Reference](https://www.domainlanguage.com/wp-content/uploads/2016/05/DDD_Reference_2015-03.pdf)：参考领域人员与技术人员协同探索模型、共同语言与明确适用边界。
 - [Anthropic, Effective context engineering for AI agents](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents)：参考最小高信号上下文、按失败模式迭代规则与避免上下文膨胀。
+- [OpenAI, Model guidance](https://developers.openai.com/api/docs/guides/latest-model)：参考精简重复指令，并用代表性任务同时评价质量、证据、Token、延迟与成本。
+- [Adaptive-RAG](https://aclanthology.org/2024.naacl-long.389/)与[Adaptive Retrieval Without Self-Knowledge?](https://aclanthology.org/2025.acl-long.319/)：参考按任务需要在不检索、一次检索和更深研究之间路由，并把效率纳入评价。
+- [The Distracting Effect](https://aclanthology.org/2025.acl-long.892/)：参考相关但无用的检索内容可能干扰生成，不能用来源数量代替信息效用。
 - [KKKKhazix/human-writing（审读快照）](https://github.com/KKKKhazix/human-writing/tree/4fda173f3fef7fb808f3eba991eeb2528ea4b189)：材料门槛、说话位置、段落推进、现实／虚构边界与改稿流程。
 - [jiji262/humanizer-chinese（审读快照）](https://github.com/jiji262/humanizer-chinese/tree/1d6c08e10fbfe0e1b36ac784834451c6aae0a92c)：对英文症状目录的中文语体化改造、假阳性与防过度纠偏。
 - [blader/humanizer（审读快照）](https://github.com/blader/humanizer/tree/523374dee72d67c7b2b5f858ea0094ffda49c3ac)：英文 AI 写作症状、声音校准、调用模式与保真边界。
