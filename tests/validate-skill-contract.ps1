@@ -112,8 +112,13 @@ if ($null -ne $skill) {
     if ($skill -notmatch 'another general Chinese writing skill') {
         Add-ContractError 'SKILL.md缺少通用中文写作Skill的分流规则。'
     }
-    if ($skill -notmatch 'open-world or mixed crystallization that would create a new problem classification') {
-        Add-ContractError 'SKILL.md没有把形成新分类、解释、设计或会改变判断与行动的建议设为外部发现的可观察触发。'
+    if ($skill -notmatch 'pass an external-evidence gate before committing to an outline or solution') {
+        Add-ContractError 'SKILL.md没有把外部知识候选与实际检索拆成两级路由。'
+    }
+    foreach ($gatePhrase in @('time-sensitive, unfamiliar, disputed, high-impact', 'contains open-world load-bearing claims', 'Do not run discovery for closed-source work', 'stable low-risk knowledge and simple direct work normally take this path', 'Stable model knowledge may generate candidates', 'start with one pass over the minimum source families needed', 'A single authoritative source may be sufficient')) {
+        if ($skill -notmatch [regex]::Escape($gatePhrase)) {
+            Add-ContractError "SKILL.md的外部证据门缺少路由边界：$gatePhrase"
+        }
     }
 }
 
@@ -127,22 +132,27 @@ if ($null -ne $openAiYaml) {
     if ($openAiYaml -notmatch '来源模式' -or $openAiYaml -notmatch '开放世界|混合') {
         Add-ContractError 'openai.yaml没有保留封闭／开放／混合来源的研究边界。'
     }
-    if ($openAiYaml -notmatch '先有界发现外部已有知识') {
-        Add-ContractError 'openai.yaml仍把外部已有知识当作输入不足后的可选补救。'
+    if ($openAiYaml -notmatch '先过外部证据门' -or $openAiYaml -notmatch '只在承重主张需要时') {
+        Add-ContractError 'openai.yaml没有表达先过证据门、按承重主张自适应发现的默认入口。'
     }
 }
 
 if ($null -ne $foundations) {
-    if ($foundations -notmatch '任务需要形成新的问题分类、解释模型、方案或会改变判断与行动的建议时，默认先') {
-        Add-ContractError 'foundations没有把外部发现设为开放世界结晶的默认步骤。'
+    if ($foundations -notmatch '外部已有知识应进入候选空间.*不等于.*每次都调用检索工具') {
+        Add-ContractError 'foundations没有区分外部知识候选与实际检索。'
     }
     if ($foundations -notmatch '优先发现也不等于优先相信、照搬或长期保存') {
         Add-ContractError 'foundations没有区分外部知识的发现、采信、迁移与保存。'
     }
 }
 
-if ($null -ne $realityWriting -and $realityWriting -notmatch '来源边界封闭或现有高质量参照已经覆盖承重主张时不追加') {
-    Add-ContractError 'reality-writing缺少封闭来源与已有充分参照的停止边界。'
+if ($null -ne $realityWriting) {
+    if ($realityWriting -notmatch '不要在本页另建一套触发逻辑') {
+        Add-ContractError 'reality-writing重复定义检索触发，可能与SKILL.md漂移。'
+    }
+    if ($realityWriting -notmatch '来源边界封闭时不检索' -or $realityWriting -notmatch '其余任务仍按主门的触发与轻路径判断') {
+        Add-ContractError 'reality-writing没有服从SKILL.md对封闭来源与轻路径的单一触发逻辑。'
+    }
 }
 
 foreach ($regressionFile in @(
@@ -156,6 +166,19 @@ foreach ($regressionFile in @(
     if (-not (Test-Path -LiteralPath (Join-Path $repoRoot $regressionFile) -PathType Leaf)) {
         Add-ContractError "缺少回归材料：$regressionFile"
     }
+}
+
+$externalRequests = Read-RepoText 'tests\2026-08-11\external-prior-requests.md'
+$externalRubric = Read-RepoText 'tests\2026-08-11\external-prior-rubric.md'
+if ($null -ne $externalRequests) {
+    foreach ($requiredCase in @('稳定低风险解释不触发研究', '持久规则与重复决策需要外部证据', '先恢复判据，不能被首个框架锚定', '持久但封闭的本地事实不触发研究', '狭窄当前事实不机械扩张来源')) {
+        if ($externalRequests -notmatch [regex]::Escape($requiredCase)) {
+            Add-ContractError "外部证据门回归缺少代表性路径：$requiredCase"
+        }
+    }
+}
+if ($null -ne $externalRubric -and ($externalRubric -notmatch '输入与输出Token' -or $externalRubric -notmatch '仅凭总耗时不能归因于规则')) {
+    Add-ContractError '外部证据门回归没有区分质量、工具调用、Token、总耗时与冷启动干扰。'
 }
 
 if ($errors.Count -gt 0) {
