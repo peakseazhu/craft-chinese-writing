@@ -71,6 +71,8 @@ if ($null -eq $versionText) {
 $readme = Read-RepoText 'README.md'
 $skill = Read-RepoText 'skill\SKILL.md'
 $openAiYaml = Read-RepoText 'skill\agents\openai.yaml'
+$foundations = Read-RepoText 'skill\references\foundations.md'
+$realityWriting = Read-RepoText 'skill\references\reality-writing.md'
 
 if ($version -notmatch '^\d+\.\d+\.\d+$') {
     Add-ContractError "VERSION不是语义化版本：$version"
@@ -110,6 +112,9 @@ if ($null -ne $skill) {
     if ($skill -notmatch 'another general Chinese writing skill') {
         Add-ContractError 'SKILL.md缺少通用中文写作Skill的分流规则。'
     }
+    if ($skill -notmatch 'open-world or mixed crystallization that would create a new problem classification') {
+        Add-ContractError 'SKILL.md没有把形成新分类、解释、设计或会改变判断与行动的建议设为外部发现的可观察触发。'
+    }
 }
 
 if ($null -ne $openAiYaml) {
@@ -122,13 +127,31 @@ if ($null -ne $openAiYaml) {
     if ($openAiYaml -notmatch '来源模式' -or $openAiYaml -notmatch '开放世界|混合') {
         Add-ContractError 'openai.yaml没有保留封闭／开放／混合来源的研究边界。'
     }
+    if ($openAiYaml -notmatch '先有界发现外部已有知识') {
+        Add-ContractError 'openai.yaml仍把外部已有知识当作输入不足后的可选补救。'
+    }
+}
+
+if ($null -ne $foundations) {
+    if ($foundations -notmatch '任务需要形成新的问题分类、解释模型、方案或会改变判断与行动的建议时，默认先') {
+        Add-ContractError 'foundations没有把外部发现设为开放世界结晶的默认步骤。'
+    }
+    if ($foundations -notmatch '优先发现也不等于优先相信、照搬或长期保存') {
+        Add-ContractError 'foundations没有区分外部知识的发现、采信、迁移与保存。'
+    }
+}
+
+if ($null -ne $realityWriting -and $realityWriting -notmatch '来源边界封闭或现有高质量参照已经覆盖承重主张时不追加') {
+    Add-ContractError 'reality-writing缺少封闭来源与已有充分参照的停止边界。'
 }
 
 foreach ($regressionFile in @(
     'tests\2026-08-10\abstraction-scope-requests.md',
     'tests\2026-08-10\abstraction-scope-rubric.md',
     'tests\2026-08-10\skill-routing-requests.md',
-    'tests\2026-08-10\skill-routing-rubric.md'
+    'tests\2026-08-10\skill-routing-rubric.md',
+    'tests\2026-08-11\external-prior-requests.md',
+    'tests\2026-08-11\external-prior-rubric.md'
 )) {
     if (-not (Test-Path -LiteralPath (Join-Path $repoRoot $regressionFile) -PathType Leaf)) {
         Add-ContractError "缺少回归材料：$regressionFile"
