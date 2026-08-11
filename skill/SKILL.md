@@ -48,7 +48,7 @@ Set the source mode separately from depth:
 - **Open-world** — Use for understanding, explanation, first-principles reasoning, knowledge construction, system design, or a request for the best current model when the answer space is not explicitly closed. Treat the user's formulation as a starting observation, not the boundary of possible categories or solutions. The user does not need to say that the formulation is incomplete or immature.
 - **Mixed** — Use when local facts, decisions, quotations, or personal experience are closed to the supplied evidence while the explanatory model, comparison set, or proposed design is open to research. Mark the boundary by claim, not by whole document.
 
-For high-leverage open-world or mixed crystallization, run a bounded discovery pass before outlining when established systems could materially change the model:
+For open-world or mixed crystallization that would create a new problem classification, explanatory model, design, or recommendation that could change a decision or action, run a bounded discovery pass before outlining. Skip additional discovery only when the source boundary is closed or current high-quality external references already cover the load-bearing claims:
 
 1. recover a generic problem class without exposing private or sensitive details;
 2. choose sources by claim: use first-order material for what a subject defines, designed, or claims; use independent research, operating evidence, or counterexamples for effects, generality, and failure conditions; compare a few materially different model and source families;
